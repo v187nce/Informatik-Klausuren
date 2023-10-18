@@ -15,7 +15,10 @@ public class Statist{
     public char getGeschlecht(){return geschlecht;}
     public void setName(String name){this.name = name;}
     public void setGeschlecht(char geschlecht){this.geschlecht = geschlecht;}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 26cbf075db0b3d286cc86842533e9cba115578f9
 }

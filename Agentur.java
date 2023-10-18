@@ -1,17 +1,17 @@
 import java.util.Queue;
+import java.util.LinkedList;
 import java.util.*; 
 
 public class Agentur{
     private Queue<Statist> statisten;
     public Agentur(){
-        statisten = new Queue<Statist>();
     }   
     public void neuerStatist(String name, char geschlecht){ 
         statisten.add(new Statist(name, geschlecht));
         System.out.println("Neuer Statist erstellt mit Namen " + name);
     }
-    public Statist statistVermitteln(char geschlecht){
-        Queue <Statist> gefunden = new Queue<Statist>();
+    public Queue<Statist> statistVermitteln(char geschlecht){
+        Queue <Statist> gefunden = new LinkedList<Statist>();
 
         while(!gefunden.contains(statisten.element())){
             if (statisten.element().getGeschlecht() == geschlecht){
@@ -22,8 +22,8 @@ public class Agentur{
         }
         return statisten;
     }
-    public Statist mannOderFrau(char geschlecht){
-        Queue <Statist> gefunden = new Queue<Statist>();
+    public Queue<Statist> mannOderFrau(char geschlecht){
+        Queue <Statist> gefunden = new LinkedList<Statist>();
 
         while(statisten.element() != null){
             if (statisten.element().getGeschlecht() == geschlecht){
